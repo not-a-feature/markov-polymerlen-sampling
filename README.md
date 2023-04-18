@@ -1,4 +1,5 @@
 # Markov Chain SubPolymer Sampling
+See: `markov_chain_polymer_sampling.py`
 
 This Python script simulates the length of homogen (only one type of monomer) parts of a polymer using a Markov chain model. It generates a trajectory of monomer sequences and computes the length distribution of subsequences containing the same monomer.
 The script also estimates the distribution of the subsequences using a (in this case gamma) distribution and plots the true and estimated distributions.
@@ -27,4 +28,7 @@ python3 markov_chain_polymer_sampling.py
 
 This will generate a polymer trajectory using the specified Markov chain model, compute the length distribution of homogen subsequences, fit a gamma distribution to the true length distribution, and plot the true and estimated distributions.
 
-<img src="Figure_1.png" width=400 alt="Plot of lengthdistribution">
+<img src="Figure_1.png" width=400 alt="Plot of length distribution">
+
+# Polymer Subswapping
+See: `polymer_subswapping.py`
