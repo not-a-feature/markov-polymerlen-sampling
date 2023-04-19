@@ -12,6 +12,16 @@ The script also estimates the distribution of the subsequences using a (in this 
 - A gamma distribution is fitted to the true length distributions.
 - The true and estimated length distributions are plotted using Matplotlib.
 
+# Polymer Subswapping
+See: `polymer_subswapping.py`
+
+This generates a sequence consisting of alternating 'BXBX...', with 'X' randomly populated by
+either 'A' or 'B' based on the given probabilities.
+
+The trivial case populates 'X' with 'A' or 'B' (1/0) creates alternating sequence of
+'ABAB', and so on, meaning that both appear in chains of length 1 with a probability of 0.5.
+
+
 ## Dependencies
 
 - NumPy
@@ -30,11 +40,3 @@ This will generate a polymer trajectory using the specified Markov chain model, 
 
 <img src="Figure_1.png" width=400 alt="Plot of length distribution">
 
-# Polymer Subswapping
-See: `polymer_subswapping.py`
-
-This generates a sequence consisting of alternating 'BXBX...', with 'X' randomly populated by
-either 'A' or 'B' based on the given probabilities.
-
-The trivial case populates 'X' with 'A' or 'B' (1/0) creates alternating sequence of
-'ABAB', and so on, meaning that both appear in chains of length 1 with a probability of 0.5.
