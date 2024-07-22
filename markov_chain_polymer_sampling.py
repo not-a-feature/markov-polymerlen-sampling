@@ -4,6 +4,7 @@ It generates a trajectory of monomer sequences and computes the length distribut
 containing the same monomer. The script also estimates the distribution of the subsequences using a
 (in this case gamma) distribution and plots the true and estimated distributions.
 """
+
 import numpy as np
 from utils import length_distribution, relative_frequencies, plot_distribution_and_estimation
 
@@ -76,12 +77,6 @@ if __name__ == "__main__":
         ]
     )
 
-    FIT_FUNCTION_TO_DATA = False
-
-    # Function to fit
-    # Gamma probability density function
-    FIT_FUNC = lambda x, m, s: gamma.pdf(x, m, s)
-
     # Example with 3 states
     """"
     STATES = ["A", "B", "C"]
@@ -118,7 +113,4 @@ if __name__ == "__main__":
         for k, v in sorted(rel_freq[state].items()):
             print(f"{state}     |  {k:5} | {v:.5f}")
 
-    if FIT_FUNCTION_TO_DATA:
-        plot_distribution_and_estimation(rel_freq, FIT_FUNC)
-    else:
-        plot_distribution_and_estimation(rel_freq, False)
+    plot_distribution_and_estimation(rel_freq, False)

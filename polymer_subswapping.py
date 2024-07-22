@@ -29,12 +29,6 @@ if __name__ == "__main__":
     p_A = 0.64  # Probability of swapping X to
     p_B = 1 - p_A
 
-    FIT_FUNCTION_TO_DATA = False
-
-    # Function to fit
-    # Gamma probability density function
-    FIT_FUNC = lambda x, m, s: gamma.pdf(x, m, s)
-
     # Simulation and analysis
     STATES = ["A", "B"]
     trajectory = swap_simulation(STEPS, STATES, p_A, p_B)
@@ -55,7 +49,4 @@ if __name__ == "__main__":
         for k, v in sorted(rel_freq[state].items()):
             print(f"{state}     |  {k:5} | {v:.5f}")
 
-    if FIT_FUNCTION_TO_DATA:
-        plot_distribution_and_estimation(rel_freq, FIT_FUNC)
-    else:
-        plot_distribution_and_estimation(rel_freq, False)
+    plot_distribution_and_estimation(rel_freq)
